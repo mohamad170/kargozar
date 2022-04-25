@@ -1,0 +1,41 @@
+@mixin Hover {
+  color: $pcolor;
+  border-color: $pcolor;
+  cursor: pointer;
+  // transition: 0.5s;
+  // -webkit-transition:0.5s;
+}
+@mixin a-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+@mixin Buttonse {
+  background: $pcolor;
+  color: #fff;
+  border-radius: 0;
+  margin-bottom: -16px;
+}
+
+@mixin a-hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+@mixin background {
+  background-color:$background;
+  border: 1px solid #e3e3e3;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+@mixin formback {
+  background-color:$background;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
+@mixin modalbutton {
+  background-color: $pcolor;
+  color: #fff;
+  border-radius: 0;
+}

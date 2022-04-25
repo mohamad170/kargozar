@@ -1,0 +1,537 @@
+@import 'variable';
+@import 'mixin';
+
+
+
+@font-face {
+  font-family: bNazanin;
+  src: url("../fonts/B-NAZANIN.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: aminhafezi;
+  src: url("../fonts/Amirhafezi.ttf") format("truetype");
+}
+
+body{
+  font-family: bNazanin;
+  margin: 0;
+  padding: 0;
+}
+
+// header-top
+header{
+  .header-top{
+
+     .logo{
+       display: flex;
+       align-items: center;
+     }
+
+     a{
+        @include a-link;
+
+         &:hover{
+           color: rgba(0,0,0,0.8);
+         }
+     }
+    .header-top__left{
+      ul{
+        li{
+          padding: 0 9px;
+
+           a{
+             @include a-link;
+
+              &:hover{
+                color: $pcolor;
+              }
+           }
+           // end a
+        }
+        // end li
+      }
+      // end ul
+
+      .header-top__left-phonecall{
+        align-items: center;
+      }
+      // end header-top__left-phonecall
+    }
+  }
+  // end header-top
+
+
+
+  // modal register and login
+   .modal{
+     .modal-dialog{
+       .modal-title{
+         color: $pcolor;
+         font-family: aminhafezi;
+       }
+     }
+     .form-control{
+       border-radius: 0;
+
+       &:focus{
+         box-shadow: none;
+         border-color: $pcolor;
+       }
+     }
+     .modal-content{
+       // background-color: $pcolor;
+
+        .modal-header{
+          border-bottom: none;
+
+           .close{
+             padding: 0 10px;
+             margin: 0;
+             opacity: 1;
+
+             &:focus{
+               outline: none;
+             }
+
+              span{
+                 i{
+                   font-size: 16px;
+                   color: $pcolor;
+
+                    &:focus{
+                      outline: none;
+                    }
+                 }
+              }
+           }
+        }
+        // modal-header
+        // modal-body
+        .modal-body{
+          a{
+            &:hover{
+              text-decoration: none;;
+            }
+          }
+        }
+        .modal-footer{
+          .close-btn{
+            float: right;
+            @include modalbutton;
+
+             &:focus{
+               box-shadow: none;
+             }
+          }
+          .change-btn{
+            @include modalbutton;
+          }
+        }
+     }
+     // modal-content
+   }
+   // end register and login
+
+   // slider
+   .header-slider{
+     .carousel{
+       .carousel-indicators{
+         li{
+           background-color: $pcolor;
+         }
+       }
+     }
+   }
+   // end slider
+
+  .header-mainnav{
+    background: $pcolor;
+
+     .navbar{
+        .navbar-nav{
+          li{
+            padding-left: 15px;
+
+             a{
+               color: #fff;
+             }
+          }
+        }
+     }
+     // end navbar
+     form{
+       input{
+         width: 215px !important;
+         border-radius: 0;
+       }
+
+       i{
+         left: 10px;
+       }
+     }
+  }
+  // end header-mainnav
+
+
+}
+
+
+
+
+main{
+  .kargozar-case{
+    .kargozar-case__item{
+      border: 1px solid #000;
+
+          &:hover{
+            @include Hover;
+          }
+
+       .kargozar-case__item-icon{
+         border: 1px solid #000;
+         margin: 5px;
+         padding: 50px 0;
+
+         &:hover{
+           @include Hover;
+         }
+       }
+    }
+  }
+  // end kargozar-case
+
+  .kargozar-maincontent{
+    .kargozar-maincontent__download{
+      a{
+        @include Buttonse;
+      }
+    }
+    // end  kargozar-maincontent__download
+    hr{
+      background-color:$pcolor;
+    }
+
+    .kargozar-maincontent__email{
+      form{
+         input[placeholder]{
+           padding-right: 30px;
+         }
+
+        i{
+          top: 10px;
+          right: 10px;
+        }
+
+        a{
+          background: $pcolor;
+          color: #fff;
+        }
+      }
+    }
+    // end kargozar-maincontent__email
+
+    .kargozar-maincontent__joinnews{
+      a{
+        @include Buttonse;
+      }
+    }
+     // end kargozar-maincontent__joinnews
+    hr{
+      background: $pcolor;
+    }
+
+
+    .kargozar-maincontent__joinnews-form{
+       @include formback;
+
+      form{
+        input{
+          border-radius: 0;
+        }
+        input[placeholder]{
+          padding-right: 30px;
+        }
+        .form-control{
+          &:focus{
+            border-color: transparent;
+            box-shadow: 0px 0px 0px 0px rgb(255,255,255);
+          }
+        }
+        i.fa-user{
+          right: 25px;
+          top: 25px;
+        }
+
+        i.fa-envelope{
+          top: 80px;
+          right: 25px;
+        }
+
+        a{
+          background: $pcolor;
+          color: #fff;
+          padding: 0 10px;
+        }
+      }
+    }
+    // end kargozar-maincontent__joinnews-form
+
+    .kargozar-maincontent__bestsellers{
+      a{
+        @include Buttonse;
+      }
+    }
+    // end kargozar-maincontent__bestsellers
+    hr{
+      background: $pcolor;
+    }
+
+    .kargozar-maincontent__bestsellers-item{
+      // border:1px solid $pcolor;
+      @include background;
+
+       figcaption{
+         a{
+           &:hover{
+             @include a-hover;
+           }
+         }
+       }
+    }
+    // end kargozar-maincontent__bestsellers-item
+
+    .kargozar-maincontent__lastnews{
+      a{
+        @include Buttonse;
+      }
+    }
+
+    hr{
+      background: $pcolor;
+    }
+
+    .kargozar-maincontent__lastnews-item{
+      hr{
+        height: 2px;
+
+      }
+
+      h6{
+        color: $pcolor;
+      }
+
+      .kargozar-maincontent__lastnews-item__date{
+        float: right;
+        color: $pcolor;
+      }
+
+      .kargozar-maincontent__lastnews-item__readmore{
+        float: left;
+        color: $pcolor;
+        align-items: center;
+      }
+    }
+    // end kargozar-maincontent__lastnews-item
+
+    .kargozar-maincontent__product{
+      a{
+        @include Buttonse;
+      }
+
+      hr{
+        background: $pcolor;
+      }
+    }
+
+    .kargozar-maincontent__product-item{
+      @include background;
+
+        figcaption{
+           a{
+             &:hover{
+               @include a-hover;
+             }
+           }
+        }
+    }
+  }
+  // end kargozar-maincontent
+
+
+
+  // contact
+  .contact-content{
+    .contact-content__title{
+      h2{
+        font-family: aminhafezi;
+        color: $pcolor;
+      }
+    }
+
+    ul{
+      padding-right: 0;
+      padding-top: 150px;
+    }
+  }
+
+  .contact-form_title{
+    color: $pcolor;
+  }
+
+  .form-control{
+    border-radius: 0;
+
+     &:focus{
+       box-shadow: none;
+       border-color: $pcolor;
+     }
+  }
+
+  .btn-form{
+    @include modalbutton;
+    outline: none;
+    border: 1px solid $pcolor;
+  }
+}
+
+
+
+
+
+
+
+footer{
+  background: #333841;
+  padding: 10px;
+
+   h6{
+     border-bottom: 1px solid #fff;
+     width: 70px;
+   }
+
+   .footer-lastnews__list{
+     li{
+       font-size: 15px;
+       line-height: 25px;
+       text-align: right;
+     }
+   }
+
+   .footer-socialmedia{
+      float: left;
+     ul{
+       li{
+          padding: 0px 5px;
+         a{
+           i{
+             color: #fff;
+             font-size: 25px;
+           }
+         }
+       }
+     }
+   }
+}
+
+
+
+
+
+
+@media (min-width:992px) and (max-width:1200px) {
+  footer{
+    .footer-lastnews__list{
+      li{
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media (max-width:992px) {
+  header{
+    .header-mainnav{
+      .navbar{
+        .navbar-toggler{
+          border-color: #fff;
+        }
+      }
+      form{
+        input{
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  main{
+    .kargozar-case{
+      .kargozar-case__item{
+        margin-bottom: 25px;
+      }
+    }
+
+    .kargozar__ad{
+      display: none;
+    }
+  }
+  // end main
+}
+
+
+@media (min-width:768px) and (max-width:992px) {
+  .kargozar-maincontent__lastnews-item{
+    figure{
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .contact-content{
+    ul{
+      padding-top: 30px !important;
+      padding-bottom: 30px;
+    }
+  }
+}
+@media (max-width:576px) {
+    header{
+      .header-top{
+        .logo{
+          display: block;
+          text-align: center;
+
+          figure{
+
+             img{
+               width: 100px;
+             }
+          }
+        }
+      }
+    }
+
+   .kargozar-maincontent__lastnews-item{
+     figure{
+       text-align: center;
+     }
+   }
+  .kargozar-maincontent__bestsellers-item{
+    margin-bottom: 30px;
+  }
+
+
+  // contactus
+  .contact-content{
+    ul{
+      padding-top: 30px !important;
+      padding-bottom: 30px;
+    }
+  }
+}
